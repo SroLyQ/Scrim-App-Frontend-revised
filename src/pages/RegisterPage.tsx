@@ -12,22 +12,23 @@ const RegisterPage: React.FC = () =>{
     const [password,setPassword] = useState('')
     const [confirmPass,setConfirmPass] = useState('')
     const [error,setError] = useState('')
+    
+    console.log(username,
+        password,
+        confirmPass)
 
     const userNameInputHandler = (event:any) => {
         setUsername(event.target.value)
-        console.log(username)
     }
     const passwordInputHandler = (event:any) => {
         setPassword(event.target.value)
-        console.log(password)
     }
     const passwordConInputHandler = (event:any) => {
         setConfirmPass(event.target.value)
-        console.log(confirmPass)
     }
 
     const submitHandler = async () =>{
-        if(password != confirmPass){
+        if(password !== confirmPass){
             setError('password mismatch')
             return;
         }
