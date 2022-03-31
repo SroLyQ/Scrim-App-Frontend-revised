@@ -52,7 +52,7 @@ const LoginPage:React.FC = ()=> {
         setPasswordErr('')
         setUsernameErr('')
         
-        let path = '/home'
+        let path = '/'
         navigate(path)
     }
     const gotoRegister = () =>{
@@ -72,26 +72,27 @@ const LoginPage:React.FC = ()=> {
                         <img src={user_icon} className='h-[100%] ml-[10%]' alt='user_icon'/>
                         <input type='text' className='border-block border-black border rounded-lg ml-[4%] h-[100%] w-[55%] focus:border focus:bg-gray-100 text-3xl indent-2.5' placeholder='username' onChange={userNameInputHandler}></input>
                     </div>
-                    <div className='h-[5%] text-red-900'>
+                    <div className='h-[5%] text-red-600'>
                         {usernameErr}
                     </div>
                     <div className='flex flex-row mx-[4%] h-[10%]'>
                         <img src={user_icon} className='h-[100%] ml-[10%]' alt='pass_icon'/>
                         <input type='password' className='border-block border-black border rounded-lg ml-[4%] h-[100%] w-[55%] focus:border focus:bg-gray-100 text-3xl indent-2.5'  placeholder='password'  onChange={passwordInputHandler}></input>
                     </div>
-                    <div className='h-[5%] text-red-900'>
+                    <div className='h-[5%] text-red-600'>
                         {passwordErr}
                     </div>
                     <div className='flex flex-row place-content-center h-[10%]'>
                         <button className='border-block bg-white border-black border ml-[2%] w-[50%] rounded-md bg-[#b91c1c] text-white text-2xl active:bg-[#991b1b]' onClick={loginSubmitHandler} >
                             <div className='flex flex-row h-[50%] place-content-end'>
-                                <label  className='pr-[30%] py-[0.001%] text-2xl hover:cursor-pointer'>Login</label>
+                                <label  className='pr-[30%] py-[0.001%] text-2xl hover:cursor-pointer font-bold'>Login</label>
                                 <img src={arrow_icon} className='mt-[1%] mr-[4%]' alt='login_icon'/>
                             </div>
                         </button>
                     </div>
                     <div className='flex flex-row place-content-center'>
-                        <button className='text-lg mt-[2%] underline underline-offset-1 text-[#991b1b] active:text-[#7f1d1d]' onClick={gotoRegister}> 
+                        <label className='mt-[3%]'> need an account?</label>
+                        <button className='text-lg ml-[2%] mt-[2%] underline underline-offset-1 text-[#991b1b] active:text-[#7f1d1d] font-bold' onClick={gotoRegister}> 
                             register
                         </button>
                     </div>

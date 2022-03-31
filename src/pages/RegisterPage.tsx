@@ -69,13 +69,13 @@ const RegisterPage: React.FC = () =>{
                 <div className='flex flex-row place-content-center h-[10%] mt-[5%]'>
                     <button className='border-block bg-white border-black border ml-[2%] w-[50%] rounded-md bg-[#b91c1c] text-white text-2xl active:bg-[#991b1b]' onClick={submitHandler} >
                         <div className='flex flex-row h-[50%] place-content-end'>
-                            <label  className='pr-[30%] py-[0.001%] text-2xl hover:cursor-pointer'>Register</label>
+                            <label  className='pr-[23%] py-[0.001%] text-2xl hover:cursor-pointer font-bold'>Register</label>
                             <img src={arrow_icon} className='mt-[1%] mr-[4%]' alt='login_icon'/>
                         </div>
                     </button>
                 </div>
                 <div className='mt-[2%]'>
-                    <label className='text-red-800 text-lg' > {error} </label>
+                    <label className='text-red-600 text-lg' > {'* ' + error} </label>
                 </div>
             </div>
         </div>
