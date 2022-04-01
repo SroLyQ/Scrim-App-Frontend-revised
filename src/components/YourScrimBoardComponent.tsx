@@ -1,5 +1,5 @@
 import dummiesMatch from "../dummies/matchDummies"
-import YourScrimMatch from "./YourScrimMatch"
+import YourScrimMatch from "./YourScrimMatchComponent"
 
 
 const YourScimBoard : React.FC = () => {

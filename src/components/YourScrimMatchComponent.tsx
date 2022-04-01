@@ -5,7 +5,7 @@ interface Props{
     matchData : MatchProps['matchData']
 }
 
-const YourScrimMatch = ({matchData}:Props) => {
+const YourScrimMatch :React.FC<Props> = ({matchData}) => {
     var test:boolean = false
     var nowColor:string = (test ? 'border-l-lightRed' : 'border-l-goodGreen')
     console.log(nowColor)
