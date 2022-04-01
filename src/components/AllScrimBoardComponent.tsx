@@ -6,7 +6,7 @@ const AllScrimBoard : React.FC = () =>{
         <div className="h-full w-full bg-zinc-500 overflow-y-scroll border-black border-[2px]">
             {
                 ScrimPostDummies.map((element:any) => (
-                    <ScrimFindPost/>
+                    <ScrimFindPost postData={element}/>
                 ))
             }
         </div>
