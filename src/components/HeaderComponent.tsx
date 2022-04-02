@@ -23,10 +23,9 @@ const HeaderComponent : React.FC = () =>{
 
         const teamClickHandler = () => {
             console.log('Team')
-            path='/team'
+            path='/team/adsfasdf'
             navigate(path)
         }
-
         if(location.pathname === '/'){
             homeStyle= 'border-b-[4px] border-b-hardRed'
             boardStyle = ''
@@ -37,7 +36,7 @@ const HeaderComponent : React.FC = () =>{
             boardStyle = 'border-b-[4px] border-b-hardRed'
             teamStyle = ''
         }
-        else if(location.pathname.includes('team')){
+        else if(location.pathname.includes('/team/')){
             homeStyle= ''
             boardStyle = ''
             teamStyle = 'border-b-[4px] border-b-hardRed'
@@ -48,7 +47,7 @@ const HeaderComponent : React.FC = () =>{
             teamStyle = ''
         } 
         return(
-                <div className="flex flex-rows bg-grayHeader h-[60px]">
+                <div className="flex flex-rows bg-grayHeader h-[60px] w-full justify-center">
                     <div className="bg-gray-300 h-[50px] w-[50px] mt-[5px] ml-[2%]">
                         logo
                     </div>
@@ -62,13 +61,13 @@ const HeaderComponent : React.FC = () =>{
                                 <label className="h-[50%] w-[50%] mt-[15px] hover:cursor-pointer"> Board </label>
                         </button>
                     </div>
-                    <div className={"flex flex-col bg-grayHeader-700 ml-[2%] w-[160px] h-[100%] text-white border-l-[2px]  border-r-[2px] border-[#3f3f46] text-center place-items-center hover:border-b-[6px] hover:border-b-lightRed" + teamStyle}>
-                    <button className=" h-[100%] w-[100%] border-box " onClick={boardClickHandler} >
+                    <div className={"flex flex-col bg-grayHeader-700 ml-[2%] w-[160px] h-[100%] text-white border-l-[2px]  border-r-[2px] border-[#3f3f46] text-center place-items-center hover:border-b-[6px] hover:border-b-lightRed " + teamStyle}>
+                    <button className=" h-[100%] w-[100%] border-box " onClick={teamClickHandler} >
                                 <label className="h-[50%] w-[50%] mt-[15px] hover:cursor-pointer"> Team </label>
                         </button>
                     </div>
-                    <div className="ml-[50%]">
-                        <img src={userIcon} className="h-[80%] mt-[10%] ml-[40%] rounded-full"/>
+                    <div className="flex ml-[50%] justify-center items-center">
+                        <img src={userIcon} className="h-[80%] rounded-full"/>
                     </div>
                 </div>
             )

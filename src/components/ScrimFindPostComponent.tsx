@@ -12,11 +12,11 @@ const ScrimFindPost: React.FC<Props> = ({postData}) =>{
     }
 
     return(
-        <div className='flex flex-rows mt-[1%] '>
-            <div className={"flex flex-rows bg-white h-[90px] w-[745px] ml-[1%] border-l-[20px] items-center"}>
+        <div className='flex flex-rows mt-[1%] w-full'>
+            <div className={"flex flex-rows bg-white h-[90px] w-[94%] ml-[1%] border-l-[20px] items-center"}>
                 <div className='flex flex-rows align-middle items-center'>
                     <img src={logo_placeHolder} className='h-[60px] w-[60px] ml-[14px] '/>
-                    <div className='flex  h-[40px] w-[200px] items-center'>
+                    <div className='flex  h-[40px] w-[200px] items-center '>
                         <label className='text-3xl pl-[25px] break-words text-center'> {postData.teamName} </label>
                     </div>
                     <div className='flex flex-col h-full w-[120px] items-center'>

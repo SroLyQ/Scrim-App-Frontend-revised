@@ -1,11 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Router, Route, BrowserRouter, Routes, Link } from 'react-router-dom'
+import {Router, Route, BrowserRouter, Routes, useParams} from 'react-router-dom'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage';
 import HomePage from './pages/HomePage';
 import BoardPage from './pages/BoardPage';
+import TeamPage from './pages/TeamPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/register' element={<RegisterPage/>}/>
         <Route path = '/' element = {<HomePage/>}/>
         <Route path = '/board' element = {<BoardPage/>}/>
+        <Route path='/team/:id' element={<TeamPage/>}/>
       </Routes>
     </BrowserRouter>
   );

@@ -7,6 +7,7 @@ const AllScrimBoard : React.FC = () =>{
             {
                 ScrimPostDummies.map((element:any) => (
                     <ScrimFindPost postData={element}/>
+                    
                 ))
             }
         </div>
