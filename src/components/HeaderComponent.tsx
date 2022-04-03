@@ -73,7 +73,7 @@ const HeaderComponent : React.FC = () =>{
                         </button>
                     </div>
                     <div className="flex ml-[50%] justify-center items-center">
-                            <div className="h-full w-[55px] bg-red-700 flex items-center">
+                            <div className="h-full w-[55px] flex items-center">
                             <button onClick={profileClickHandler} > <img src={userIcon} />
                             </button>
                             </div>
