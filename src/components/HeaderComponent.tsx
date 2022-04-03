@@ -28,7 +28,7 @@ const HeaderComponent : React.FC = () =>{
         }
         const profileClickHandler = () => {
             console.log('Profile')
-            path='/Profile'
+            path='/profile'
             navigate(path)
         }
 
