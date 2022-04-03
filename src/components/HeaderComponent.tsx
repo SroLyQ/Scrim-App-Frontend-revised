@@ -26,7 +26,13 @@ const HeaderComponent : React.FC = () =>{
             path='/team/adsfasdf'
             navigate(path)
         }
-        if(location.pathname === '/'){
+        const profileClickHandler = () => {
+            console.log('Profile')
+            path='/Profile'
+            navigate(path)
+        }
+
+        if(location.pathname === '/' ){
             homeStyle= 'border-b-[4px] border-b-hardRed'
             boardStyle = ''
             teamStyle = ''
@@ -67,7 +73,12 @@ const HeaderComponent : React.FC = () =>{
                         </button>
                     </div>
                     <div className="flex ml-[50%] justify-center items-center">
-                        <img src={userIcon} className="h-[80%] rounded-full"/>
+                            <div className="h-full w-[55px] bg-red-700 flex items-center">
+                            <button onClick={profileClickHandler} > <img src={userIcon} />
+                            </button>
+                            </div>
+                        
+
                     </div>
                 </div>
             )
